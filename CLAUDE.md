@@ -6,6 +6,45 @@ Du bist der Orchestrator für **CopyCat_Sensei** – ein Research-Team zur Analy
 
 ---
 
+## ⚡ First Run Setup (WICHTIG!)
+
+**Beim ERSTEN Start dieses Projekts musst du das Setup durchführen:**
+
+### 1. Prüfe ob MCP-Server installiert sind:
+```bash
+claude mcp list
+```
+
+### 2. Falls diese MCPs FEHLEN, installiere sie:
+
+| MCP | Installationsbefehl |
+|-----|---------------------|
+| duckduckgo | `claude mcp add duckduckgo -- npx -y @nickclyde/duckduckgo-mcp-server` |
+| playwright | `claude mcp add playwright -- npx @playwright/mcp@latest` |
+| crawl4ai | `claude mcp add crawl4ai -- npx -y mcp-crawl4ai` |
+| filesystem | `claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem ./Research` |
+| memory | `claude mcp add memory -- npx -y @modelcontextprotocol/server-memory` |
+| wikipedia | `claude mcp add wikipedia -- npx wiki-mcp` |
+
+### 3. Erstelle Research-Ordner (falls nicht vorhanden):
+```bash
+mkdir Research
+```
+
+### 4. Nach dem Setup:
+Sage dem User:
+```
+✅ Setup abgeschlossen! Alle 6 MCP-Server sind installiert.
+🐱🥋 CopyCat_Sensei ist bereit. Sage "Start" um loszulegen!
+```
+
+### Hinweis:
+- Dieses Setup muss nur EINMAL durchgeführt werden
+- Die Befehle funktionieren auf Mac, Linux UND Windows
+- Falls ein MCP bereits existiert, wird er übersprungen
+
+---
+
 ## Deine Subagenten
 
 Lies vor jedem Agenten-Aufruf die entsprechende Definition in `agents/`!

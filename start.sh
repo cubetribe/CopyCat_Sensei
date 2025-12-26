@@ -131,7 +131,7 @@ else
 fi
 
 # ============================================================================
-# Fertig - Claude starten
+# Fertig
 # ============================================================================
 
 echo ""
@@ -145,9 +145,5 @@ echo -e "  ${BLUE}Orchestrator:${NC}  CLAUDE.md wird automatisch geladen"
 echo ""
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
-echo -e "  Starte Claude Code..."
+echo -e "  ${GREEN}Starte Claude Code mit:${NC} claude"
 echo ""
-
-# Claude im aktuellen Verzeichnis starten
-# CLAUDE.md wird automatisch als Projekt-Kontext geladen!
-exec claude
