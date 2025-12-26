@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Research Output (local only)
+Research/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# MCP local config
+.mcp-config.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (if any)
+node_modules/
