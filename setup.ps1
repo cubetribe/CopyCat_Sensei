@@ -50,10 +50,10 @@ Write-Host "[2/4] Prüfe MCP-Server..." -ForegroundColor Blue
 $mcps = @(
     @{name="duckduckgo"; cmd="npx -y @nickclyde/duckduckgo-mcp-server"},
     @{name="playwright"; cmd="npx @playwright/mcp@latest"},
-    @{name="crawl4ai"; cmd="npx -y mcp-crawl4ai"},
+    @{name="crawl4ai"; cmd="npx -y @gkzhb/crawl4ai-mcp"},
     @{name="filesystem"; cmd="npx -y @modelcontextprotocol/server-filesystem ./Research"},
     @{name="memory"; cmd="npx -y @modelcontextprotocol/server-memory"},
-    @{name="wikipedia"; cmd="npx wiki-mcp"}
+    @{name="wikipedia"; cmd="npx -y @shelm/wikipedia-mcp-server"}
 )
 
 $mcpList = claude mcp list 2>$null

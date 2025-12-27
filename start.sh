@@ -57,10 +57,10 @@ echo -e "${BLUE}[2/4]${NC} Prüfe MCP-Server..."
 declare -A MCPS=(
     ["duckduckgo"]="npx -y @nickclyde/duckduckgo-mcp-server"
     ["playwright"]="npx @playwright/mcp@latest"
-    ["crawl4ai"]="npx -y mcp-crawl4ai"
+    ["crawl4ai"]="npx -y @gkzhb/crawl4ai-mcp"
     ["filesystem"]="npx -y @modelcontextprotocol/server-filesystem $(pwd)/Research"
     ["memory"]="npx -y @modelcontextprotocol/server-memory"
-    ["wikipedia"]="npx wiki-mcp"
+    ["wikipedia"]="npx -y @shelm/wikipedia-mcp-server"
 )
 
 # Prüfe welche MCPs fehlen
@@ -96,7 +96,7 @@ if [ ${#MISSING_MCPS[@]} -gt 0 ]; then
                 claude mcp add playwright -- npx @playwright/mcp@latest 2>/dev/null || true
                 ;;
             "crawl4ai")
-                claude mcp add crawl4ai -- npx -y mcp-crawl4ai 2>/dev/null || true
+                claude mcp add crawl4ai -- npx -y @gkzhb/crawl4ai-mcp 2>/dev/null || true
                 ;;
             "filesystem")
                 claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem "$(pwd)/Research" 2>/dev/null || true
@@ -105,7 +105,7 @@ if [ ${#MISSING_MCPS[@]} -gt 0 ]; then
                 claude mcp add memory -- npx -y @modelcontextprotocol/server-memory 2>/dev/null || true
                 ;;
             "wikipedia")
-                claude mcp add wikipedia -- npx wiki-mcp 2>/dev/null || true
+                claude mcp add wikipedia -- npx -y @shelm/wikipedia-mcp-server 2>/dev/null || true
                 ;;
         esac
         

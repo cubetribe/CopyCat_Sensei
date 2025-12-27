@@ -122,14 +122,16 @@ Falls du lieber ein Setup-Script ausführst:
 
 Alle kostenlos. Keine API-Keys. Keine versteckten Kosten.
 
-| Server | Funktion | Wird installiert durch |
-|--------|----------|----------------------|
-| **DuckDuckGo** | Web-Suche | `start.sh` |
-| **Playwright** | Browser-Automation | `start.sh` |
-| **Crawl4AI** | Deep Web Crawling | `start.sh` |
-| **Filesystem** | Report-Speicherung | `start.sh` |
-| **Memory** | Persistente Learnings | `start.sh` |
-| **Wikipedia** | Hintergrundinfos | `start.sh` |
+| Server | NPM Package | Funktion |
+|--------|-------------|----------|
+| **DuckDuckGo** | `@nickclyde/duckduckgo-mcp-server` | Web-Suche |
+| **Playwright** | `@playwright/mcp` | Browser-Automation |
+| **Crawl4AI** | `@gkzhb/crawl4ai-mcp` | Deep Web Crawling |
+| **Filesystem** | `@modelcontextprotocol/server-filesystem` | Report-Speicherung |
+| **Memory** | `@modelcontextprotocol/server-memory` | Persistente Learnings |
+| **Wikipedia** | `@shelm/wikipedia-mcp-server` | Hintergrundinfos |
+
+> Für Details, Alternativen und Troubleshooting siehe [`mcp-servers.md`](mcp-servers.md)
 
 ---
 
@@ -138,6 +140,7 @@ Alle kostenlos. Keine API-Keys. Keine versteckten Kosten.
 ```
 CopyCat_Sensei/
 ├── CLAUDE.md              ← Orchestrator (Auto-Setup + Agenten-Steuerung)
+├── mcp-servers.md         ← MCP Referenz mit GitHub URLs & Alternativen
 ├── start.sh               ← Setup für Mac/Linux
 ├── setup.ps1              ← Setup für Windows
 ├── README.md
